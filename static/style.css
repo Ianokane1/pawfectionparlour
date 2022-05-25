@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Italianno&display=swap');
 
+
+body{
+    background-color: antiquewhite;
+    font-family: 'Oswald', sans-serif;
+}
+/* Navigation bar */
+
+.active_page {
+    background-color: antiquewhite;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
 /* Footer */
 
 footer i {
     font-size: 200%;
     padding: 3%;
-    color: #BD3C31
+    color: antiquewhite
 }
 
 .fa-facebook:hover,
