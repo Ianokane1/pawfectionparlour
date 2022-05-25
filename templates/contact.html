@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-12 mx-auto py-5">
+            <div class="contact_icons my-3">
+                <i class="fas fa-phone font-weight-normal"> 083 0778 985</i>
+            </div>
+
+            <div class="contact_icons my-3">
+                <i class="fas fa-envelope"> pawfectionparlour24@gmail.com</i>
+            </div>
+
+            <div class="contact_icons my-3">
+                <i class="fas fa-clock"> Mon-Fri 08:00 - 17:00 </i>
+            </div>
+
+            <div class="contact_icons my-3">
+                <i class="fas fa-map-marker-alt"> Bohernabreena Rd, Bohernabreena, Tallaght, Co. Dublin, D24 A218</i>
+            </div>
+        </div>
+
+        <div class="col-md-5 col-12 mx-auto py-5">
+            <form method="POST" action="https://formdump.codeinstitute.net/">
+                <label for="full_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control text_input" name="full_name" id="full_name"
+                    value="{{ user.userprofile.first_name }} {{ user.userprofile.last_name }}" required>
+
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control text_input" name="email_address" id="email"
+                    value="{{ user.email }}" required>
+
+                <label for="message">Your message</label>
+                <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+
+                <button type="submit" class="btn bg-success text-white mx-auto d-block my-3">
+                    Submit Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 w-75 mx-auto">
+            <iframe class="w-100" height="600"
+                src="https://maps.google.com/maps?q=pawfection%20parlour&t=&z=13&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
