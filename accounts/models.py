@@ -26,7 +26,7 @@ class UserProfile(models.Model):
         User, on_delete=models.CASCADE, primary_key=True)
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
-    dog_name = models.CharField(max_length=140, default='SOME STRING')
+    dog_name = models.CharField(max_length=140)
     phone_number = models.CharField(max_length=11)
 
     def __str__(self):
