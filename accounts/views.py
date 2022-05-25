@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 # Import Django generic libary
 from django.views import generic, View
 from django.views.generic import TemplateView, DeleteView
+
+from .models import Booking, UserProfile
 
 # Create your views here.
 
