@@ -48,6 +48,23 @@
                         <a class="nav-link" href="{% url 'online_booking' %}">Book Now</a>
                     </li>
 
+                    {% if user.is_authenticated %}
+                    <li class="nav-item px-2">
+                        <a class="nav-link {{ edit_profile_active }}"
+                            href="">Edit Profile</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link {{ manage_booking_active }}" href="">Manage
+                            Bookings</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+
+                    {% else %}
+
                     <li class="nav-item px-2">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                     </li>
@@ -55,6 +72,8 @@
                     <li class="nav-item px-2">
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
+
+                    {% endif %}
 
                 
                 </ul>
