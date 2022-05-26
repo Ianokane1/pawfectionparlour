@@ -62,6 +62,9 @@ ACCOUNT_SIGNUP_REDIRECT_URL = "/create_profile"
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+MAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

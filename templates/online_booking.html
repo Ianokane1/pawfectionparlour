@@ -47,7 +47,7 @@
             <div class="row w-75 mx-auto">
                 <div class="col-md-6 col-12">
                     <a class="nav-link text-white btn bg-success mx-auto mt-5 d-block"
-                        href="">Edit Profile</a>
+                        href="{% url 'edit_profile' request.user.id %}">Edit Profile</a>
                 </div>
 
                 <div class="col-md-6 col-12">

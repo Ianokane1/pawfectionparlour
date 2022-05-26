@@ -36,6 +36,18 @@ class ContactView(TemplateView):
             "contact.html",
             )
 
+class ManageBooking(generic.ListView):
+    model = Booking
+    queryset = Booking.objects.all()
+    template_name = "manage_booking.html"
+    paginate_by = 6
+    extra_context = {
+        "manage_booking_active": "custom-red"
+    }
+
+    def get_queryset(self):
+        return Booking.objects.filter(user_id=self.request.user)            
+
 class OnlineBookingView(View):
     template_name = "online_booking.html"
 
@@ -51,18 +63,63 @@ class OnlineBookingView(View):
     def post(self, request):
         date = request.POST.get("date")
         time = request.POST.get("time")
-        comments = request.POST.get("comments")
 
         online_booking = Booking.objects.create(
             booking_date=date,
             booking_time=time,
             user=request.user,
-            booking_comments=comments
         )
 
         online_booking.save()
 
         return redirect(reverse('manage_booking'))
+
+class EditBooking(View):
+    model = Booking
+    template_name = "edit_booking.html"
+    context_object_name = 'edit_booking'
+
+    def get(self, request, booking_id, *args, **kwargs):
+        booking = get_object_or_404(Booking, pk=booking_id)
+
+        return render(
+            request,
+            "edit_booking.html",
+            {
+                "booking": booking,
+                "updated": False,
+                "Update_BookingDetails": UpdateBookingDetails(instance=booking)
+            },
+        )
+
+    def post(self, request, booking_id, *args, **kwargs):
+        booking = get_object_or_404(Booking, pk=booking_id)
+
+        booking_details_form = UpdateBookingDetails(
+            request.POST, instance=booking)
+
+        if booking_details_form.is_valid():
+            booking.status = 0
+            booking_updates = booking_details_form.save()
+        else:
+            booking_details_form = UpdateBookingDetails(instance=booking)
+
+        return render(
+            request,
+            "edit_booking.html",
+            {
+                "booking": booking,
+                'updated': True,
+                "Update_BookingDetails": booking_details_form,
+            },
+        )
+
+
+class DeleteBooking(DeleteView):
+    model = Booking
+    pk_url_kwarg = "booking_id"
+    success_url = reverse_lazy("manage_booking")
+    template_name = "delete_booking.html"        
 
 class CreateProfile(View):
     template_name = "create_profile.html"
