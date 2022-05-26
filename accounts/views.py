@@ -32,4 +32,32 @@ class ContactView(TemplateView):
         return render(
             request,
             "contact.html",
-            )                    
+            )
+
+class OnlineBookingView(View):
+    template_name = "online_booking.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(
+            request,
+            "online_booking.html",
+            {
+                "online_booking_active": "custom-red",
+            }
+        )
+
+    def post(self, request):
+        date = request.POST.get("date")
+        time = request.POST.get("time")
+        comments = request.POST.get("comments")
+
+        online_booking = Booking.objects.create(
+            booking_date=date,
+            booking_time=time,
+            user=request.user,
+            booking_comments=comments
+        )
+
+        online_booking.save()
+
+        return redirect(reverse('manage_booking'))
