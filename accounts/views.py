@@ -2,8 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 # Import Django generic libary
 from django.views import generic, View
 from django.views.generic import TemplateView, DeleteView
+from django.urls import reverse_lazy
 # Import Booking model from models
 from .models import Booking, UserProfile
+from .forms import UpdateBookingDetails, EditProfileForm
 
 # Create your views here.
 
@@ -61,3 +63,29 @@ class OnlineBookingView(View):
         online_booking.save()
 
         return redirect(reverse('manage_booking'))
+
+class CreateProfile(View):
+    template_name = "create_profile.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(
+            request,
+            "create_profile.html",
+        )
+
+    def post(self, request):
+        f_name = request.POST.get("f_name")
+        l_name = request.POST.get("l_name")
+        dog_name = request.POST.get("dog_name")
+        tele = request.POST.get("phone_number")
+
+        CreateUserProfile = UserProfile.objects.create(
+            first_name=f_name,
+            last_name=l_name,
+            phone_number=tele,
+            user=request.user,
+        )
+
+        CreateUserProfile.save()
+
+        return redirect(reverse('home'))        

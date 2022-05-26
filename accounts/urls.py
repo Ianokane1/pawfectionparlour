@@ -10,4 +10,9 @@ urlpatterns = [
         views.OnlineBookingView.as_view(),
         name='online_booking'
     ),
+    path(
+        'create_profile/',
+        views.CreateProfile.as_view(),
+        name='create_profile'
+    ),
     ]
