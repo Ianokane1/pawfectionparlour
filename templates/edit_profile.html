@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="custom-red py-3 my-5">
+        <div class="row text-center">
+            <h2 class="text-decoration-underline">Edit Profile</h2>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <h4>First Name:</h4>
+            </div>
+
+            <div class="col-6">
+                <p class="d-inline">{{ user.userprofile.first_name }}</p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <h4>Last Name:</h4>
+            </div>
+
+            <div class="col-6">
+                <p>{{ user.userprofile.last_name }}</p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <h4>Dog Name:</h4>
+            </div>
+
+            <div class="col-6">
+                <p>{{ user.userprofile.dog_name }}</p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <h4>Telephone Number:</h4>
+            </div>
+
+            <div class="col-6">
+                <p>{{ user.userprofile.phone_number}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-3">
+        <div class="col-12">
+            {% if updated %}
+            <div class="alert alert-success" role="alert">
+                You have successfully updated your profile.
+            </div>
+
+            {% else %}
+
+            {% if user.is_authenticated %}
+
+            <div class="w-75 mx-auto py-5">
+                <form class="row g-3" method="post">
+                    {% csrf_token %}
+
+                    {{ Edit_ProfileForm | crispy }}
+
+                    <div class="col-12 text-center">
+                        <button type="submit" value="Update" class="btn bg-success text-white">
+                            Update Profile
+                        </button>
+                    </div>
+                </form>
+            </div>
+            {% endif %}
+
+            {% endif %}
+
+            {% else %}
+            
+            Please login to edit your profile
+
+            {% endif %}
+
+            {% endblock %}
+        </div>
+    </div>

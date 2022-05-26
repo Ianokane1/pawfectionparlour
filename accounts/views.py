@@ -88,4 +88,45 @@ class CreateProfile(View):
 
         CreateUserProfile.save()
 
-        return redirect(reverse('home'))        
+        return redirect(reverse('home'))
+
+class EditProfile(View):
+    model = UserProfile
+    template_name = "edit_profile.html"
+    context_object_name = 'edit_profile'
+
+    def get(self, request, user, *args, **kwargs):
+        profile = UserProfile.objects.filter(user=user).first()
+        if profile is None:
+            return redirect(reverse('create_profile'))
+
+        return render(
+            request,
+            "edit_profile.html",
+            {
+                "profile": profile,
+                "updated": False,
+                "Edit_ProfileForm": EditProfileForm,
+                "edit_profile_active": "custom-red",
+            },
+        )
+
+    def post(self, request, user, *args, **kwargs):
+        profile = UserProfile.objects.get(user=user)
+
+        edit_profile_form = EditProfileForm(request.POST, instance=profile)
+
+        if edit_profile_form.is_valid():
+            profile_updates = edit_profile_form.save()
+        else:
+            edit_profile_form = EditProfileForm(instance=profile)
+
+        return render(
+            request,
+            "edit_profile.html",
+            {
+                "profile": profile,
+                'updated': True,
+                "Edit_ProfileForm": edit_profile_form,
+            },
+        )

@@ -15,4 +15,10 @@ urlpatterns = [
         views.CreateProfile.as_view(),
         name='create_profile'
     ),
+
+    path(
+        'edit_profile/<str:user>/',
+        views.EditProfile.as_view(),
+        name='edit_profile'
+    ),
     ]
