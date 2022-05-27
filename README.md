@@ -351,14 +351,13 @@ All Pages:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Home page | When clicking the "home" button in the navigation bar, the browser redirects me to the home page. The is active styling will appear as the home button has a red background. | PASS
-Services page | When clicking the "Services" button in the navigation bar, the browser redirects me to the services page. 
+Services page | When clicking the "Services" button in the navigation bar, the browser redirects me to the services page. | PASS 
 Contact page | When clicking the "contact" button in the navigation bar, the browser redirects me to the contact page. | PASS
 Book now page | When clicking the "book now" button in the navigation bar, the browser redirects me to the book now page.| PASS
 Manage booking page | When clicking the "manage bookings" button in the navigation bar, the browser redirects me to the manage booking page. The user will know they are on this page by the heading. | PASS
 Edit profile page | Checked foreground information is not distracted by backgrounds| PASS
 Register page | When clicking the "register" button in the navigation bar, the browser redirects me to the register page. The user will know they are on this page by the heading. | PASS
 Login / Logout page | When clicking the "login" or "logout button in the navigation bar, the browser redirects me to the login or logout page. The user will know they are on this page by the heading. | PASS
-Foreground & background colour| PASS
 Text | Checked that all fonts and colours used are consistent. | PASS
 
 ### Footer
@@ -376,5 +375,103 @@ Responsiveness | Check every element on the page for consistent scalability in m
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 
 ![index_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653684267/accessibility_ojwrh1.png)
+
+### Servcies page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Book now button | When clicking the book now button on the page, the browser redirects to the booking page. | PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+
+![services_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685240/serviceslighthouse_udpyfs.png)
+
+### Contact page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Contact Form | Checked the form submits only when all fields are filled out. | PASS
+
+![contact_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685240/contactlighthouse_zpxg8e.png)
+
+### Booking page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Book now button | When clicking the book now button on the page, the browser redirects to the booking page. | PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Booking Form | Checked the form submits only when all required fields are filled out. | PASS
+If not signed in | Checked to see if the user has not signed in the booking form should not show and a message displays prompting the user to signup/sign-in first. | PASS
+
+### Edit booking page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Edit Booking Form | Checked the form submits only when all required fields are filled out. | PASS
+Form validation | Checked that the telephone number input only allows number input and not any text | PASS
+
+![edit_booking_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685240/editbookinglighthouse_myzw7y.png)
+
+### Manage booking page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Edit booking button | Checked that the button redirects to the edit booking page with the correct booking instance. | PASS
+Cancel booking button | Checked that the button redirects to the cancel booking page with the correct booking instance. | PASS
+
+![manage_booking_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685240/managebookinglighthouse_znrhlf.png)
+
+### Create profile page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Create profile form | Checked the form submits only when all required fields are filled out. | PASS
+If the profile has not been created | Checked to see if the user has created a profile, if not it will redirect the user to the create profile page | PASS
+Form validation | Checked that the telephone number input only allows number input and not any text | PASS
+
+### Edit profile page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Edit profile form | Checked the form submits only when all required fields are filled out. | PASS
+Form validation | Checked that the telephone number input only allows number input and not any text | PASS
+If the profile has not been created | Checked to see if the user has created a profile, if not it will redirect the user to the create profile page | PASS
+
+![edit_profile_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685241/editprofile_k6idds.png)
+
+### Register page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Register form | Checked the form submits only when all required fields are filled out. | PASS
+Sign in link | Checked the sign-in link redirects to the sign-in page. | PASS
+
+![signup_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685241/registerlighthouse_bik8ow.png)
+
+### Sign in page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+Sign in form | Checked the form submits only when all required fields are filled out. | PASS
+Signup link | Checked the signup link redirects to the signup page. | PASS
+
+![sign_in_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685240/signinlighthouse_fa4i0k.png)
+
+<a name="development-cycle"></a>
 
 
