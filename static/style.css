@@ -4,6 +4,11 @@
 body{
     background-color: antiquewhite;
     font-family: 'Oswald', sans-serif;
+    padding-bottom: 70px;
+}
+
+.transparent-background {
+    background-color: rgba(51, 170, 51, .1);
 }
 /* Navigation bar */
 
@@ -13,6 +18,11 @@ body{
 
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
+}
+
+.contact_icons {
+    color: black;
+    font-size: 150%;
 }
 
 /* Footer */

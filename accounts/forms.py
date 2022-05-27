@@ -1,6 +1,6 @@
+from django.forms import CharField, TextInput
 from .models import Booking, UserProfile
 from django import forms
-from django.forms import ModelForm, CharField, TextInput
 
 class UpdateBookingDetails(forms.ModelForm):
     class Meta:

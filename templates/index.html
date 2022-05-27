@@ -2,6 +2,27 @@
 
 {% block content %}
 
+<div class="row">
+    <div class="col-12 mt-3">
+        <div class="w-75 mx-auto mt-2 text-center">
+            <h1>
+                Welcome to Pawfection Parlour
+            </h1>
+
+            <br>
+
+            <h3>
+               Only the best care for your best friend 
+            <h3>
+        </div>
+    </div>
+</div>
+<br>
+<div class="col-12 text-center">
+    <a href="{% url 'online_booking' %}">
+    <button type="submit" class="btn bg-success text-white">Book Now</button>
+</a>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3">
@@ -11,32 +32,9 @@
                     alt="homepage_banner">
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-12">
-                <a class="nav-link text-white btn bg-success mx-auto mt-5 d-block fit-width"
-                    href="">
-                    Book Now
-                </a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 mt-3">
-                <div class="w-75 mx-auto mt-2 text-center">
-                    <h3>
-                        Welcome to Pawfection Parlour
-                    </h3>
-
-                    <br>
-
-                    <p>
-                    </p>
-                </div>
-            </div>
-        </div>
         </div>
     </div>
 </div>
+<br>
 
 {% endblock %}

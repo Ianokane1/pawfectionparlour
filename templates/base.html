@@ -17,9 +17,9 @@
     
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg text-white">
+    <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">Pawfection Parlour
+            <a class="navbar-brand text-white" href="{% url 'home' %}">Pawfection Parlour
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -33,44 +33,44 @@
 
 
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link text-white {{ home_active }}" href="{% url 'home' %}">Home</a>
                     </li>
 
                     <li class="nav-item px-2">
-                        <a class="nav-link"href="{% url 'services' %}">Services</a>
+                        <a class="nav-link text-white"href="{% url 'services' %}">Services</a>
                     </li>
 
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link text-white"href="{% url 'contact' %}">Contact</a>
                     </li>
 
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url 'online_booking' %}">Book Now</a>
+                        <a class="nav-link text-white"href="{% url 'online_booking' %}">Book Now</a>
                     </li>
 
                     {% if user.is_authenticated %}
                     <li class="nav-item px-2">
-                        <a class="nav-link {{ edit_profile_active }}"
+                        <a class="nav-link text-white {{ edit_profile_active }}"
                             href="{% url 'edit_profile' request.user.id %}">Edit Profile</a>
                     </li>
 
                     <li class="nav-item px-2">
-                        <a class="nav-link {{ manage_booking_active }}" href="{% url 'manage_booking' %}">Manage
+                        <a class="nav-link text-white {{ manage_booking_active }}" href="{% url 'manage_booking' %}">Manage
                             Bookings</a>
                     </li>
 
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
                     </li>
 
                     {% else %}
 
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
                     </li>
 
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
                     </li>
 
                     {% endif %}
@@ -89,12 +89,10 @@
     </main>
 
     <!-- Footer -->
-    <div class="bg-success">
+    <div class=" bg-success">
     <footer class="footer mt-auto text-center">
         <a href="https://facebook.com" target="_blank" rel="noopener"
             aria-label="visit our Facebook page (opens in a new page)"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com" target="_blank" rel="noopener"
-            aria-label="visit our Twitter page (opens in a new page)"><i class="fab fa-twitter"></i></a>
         <a href="https://instagram.com" target="_blank" rel="noopener"
             aria-label="visit our Instgram page (opens in a new page)"><i class="fab fa-instagram"></i></a>
     </footer>
