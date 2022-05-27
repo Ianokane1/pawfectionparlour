@@ -1,9 +1,9 @@
 # Dog Grooming Website
 
 ## Introduction
-Welcome to Pawfection Parlour. This project is a simplebooking system, allow users to book a slot for this dog groomer. This will use languages such as Django, Python, HTML, CSS and JavaScript.
+Welcome to Pawfection Parlour. This project is a simple booking system, that allows users to book a slot for this dog groomer. This will use languages such as Django, Python, HTML, CSS, and JavaScript.
 
-This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile and bookings.
+This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able to create, read, update and delete their user profile and bookings.
 
 A live website can be found [here](https://pawfectionparlour.herokuapp.com/).
 
@@ -36,9 +36,9 @@ A live website can be found [here](https://pawfectionparlour.herokuapp.com/).
 
 [Go to the top](#table-of-contents)
 
-For this project I wanted to build something close to home. My girlfriend owns a dog grooming business yet doesn't own a website. All of her bookings are made via social media and she adds all her bookings in manually. I wamted to create a system where that can be done via a website. 
+For this project, I wanted to build something close to home. My girlfriend owns a dog grooming business yet doesn't own a website. All of her bookings are made via social media and she adds all her bookings manually. I wanted to create a system where that can be done via a website. 
 
-his project will showcase simplicity and ease to making a booking, updating a booking, cancelling a booking, creating a personal profile and updating the same profile.
+his project will showcase the simplicity and ease of making a booking, updating a booking, canceling a booking, creating a personal profile, and updating the same profile.
 
 <a name="strategy"></a>
 
@@ -49,8 +49,8 @@ The main goal of this project is to allow the user to sign up, sign in/out, crea
 
 ### User Goals:
 First Time Visitor Goals
--   As a first-time visitor, I want to make a bokking at my chosen date and time.
--   As a first-time visitor, I want to view the servcies available, so that I can decide if this groomer is for me.
+-   As a first-time visitor, I want to make a booking at my chosen date and time.
+-   As a first-time visitor, I want to view the services available, so that I can decide if this groomer is for me.
 -   As a first-time visitor, I want to be able to get the contact details of the groomer with ease.
 
 Returning Visitor Goals
@@ -61,13 +61,13 @@ Returning Visitor Goals
 ### User Expectations:
 The system should have a simple user interface, with the navigation to each section clear and concise.
 
--   The servcies page is clear to read.
+-   The services page is clear to read.
 -   The user interface is easy to navigate.
 -   The website is responsive on all devices.
--   To have the ability to contact the groomer for any enquiries.
+-   To have the ability to contact the groomer for any inquiries.
 
 ### User Stories
-Throughout the project I used the GitHub projects board to log all user stories as my project management tool. This helped me keep focus on the necesarry tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed.
+Throughout the project, I used the GitHub projects board to log all user stories as my project management tool. This helped me keep the focus on the necessary tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed.
 
 ![user_story_board](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653677510/User_Stories_To_Do_hmsye6.png)
 ![user_story_board](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653677764/UserStoriesComplete_lmeffc.png)
@@ -105,7 +105,7 @@ As I am unable to include all of the features from the strategy table. I will ph
 - Contact form model, so messages are saved to the database
 - Email confirmation when a message has been received.
 - Account email verification
-- Replace django-crispy forms with HTML forms for easier control of validation and styling
+- Replace Django-crispy forms with HTML forms for easier control of validation and styling
 
 <a name="structure"></a>
 
@@ -113,10 +113,10 @@ As I am unable to include all of the features from the strategy table. I will ph
 
 It is really important to include responsive design in this project as many users are using different devices (mobile, tablet, laptop/PC). This gives the user the best experience on their device.
 
-- Responsive on all device sizes
-- Easy navigation through labelled buttons
+- Responsive for all device sizes
+- Easy navigation through labeled buttons
 - Footer at the bottom of the index page that links to the social media website.
-- All elements will be consistent including font size, font family, colour scheme.
+- All elements will be consistent including font size, font family, and color scheme.
 
 ### Database Model
 Planned database structure:
@@ -192,11 +192,11 @@ Mobile Views
 
 ### Colours
 
-After discussing with the groomer, she opted for bg-success with background color of antiquewhite.
+After discussing with the groomer, she opted for bg-success with a background color of antique-white.
 
 ### Typography
 
-Groomer decided to use Cinzel + Decorative as my font of choice with Italianno as the backup font for browsers that might not support
+Groomer decided to use Cinzel + Decorative as my font of choice with Italiano as the backup font for browsers that might not support
 
 The link to the font can be found [here](https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Italianno&display=swap').
 
@@ -228,7 +228,7 @@ The link to the font can be found [here](https://fonts.googleapis.com/css2?famil
 - Once the user has successfully signed up, this will automatically log in and direct the user to the create profile page.
 
 ### Login Page
-- A login form that requires the user to enter their email address and password that they used when signing up to the site.
+- A login form that requires the user to enter the email address and password that they used when signing up to the site.
 - A message to prompt the user that if an account has not been created they can click the signup hyperlink to be redirected to the signup page.
 - If the user enters in the wrong credentials, a message is displayed to the user.
 ![signup_email_validation](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682792/loginzoom_ro6rpu.png)
@@ -242,7 +242,7 @@ The link to the font can be found [here](https://fonts.googleapis.com/css2?famil
 - A book now button that directs the user to create a booking page. If the user has not logged in it will prompt the user to register or log in first.
 
 ### Create Profile Page
-- Once the user has registered they will be redirected to the create profile page. The page displays a form for the user to enter their first name, last name, dog name and telephone number.
+- Once the user has registered they will be redirected to the create profile page. The page displays a form for the user to enter their first name, last name, dog name, and telephone number.
 
 ### Edit Profile Page
 - The user can navigate to this page by clicking on the edit profile link in the navigation bar. This page will display the current profile details with a form below for the user to update any details.
@@ -251,9 +251,9 @@ The link to the font can be found [here](https://fonts.googleapis.com/css2?famil
 - All three service options are displayed.
 
 ### Contact Page
-- An information section that displays the groomers telephone number, email address, opening times and address.
-- A contact form that requires the user to enter their full name, email address and a message. The form is already pre-filled with the user's full name (if the user is logged in and has created a profile).
-- A Google maps iframe of the groomers location.
+- An information section that displays the groomer's telephone number, email address, opening times, and address.
+- A contact form that requires the user to enter their full name, email address, and a message. The form is already pre-filled with the user's full name (if the user is logged in and has created a profile).
+- A Google maps iframe of the groomer's location.
 
 ### Create Booking Page
 - A form that requires the user to enter/select the booking details.
@@ -265,7 +265,7 @@ The user will then need to select a date and time
 
 ### Manage Booking Page
 - Displays all user-related bookings in a list view within a card.
-- Each card will show a booking reference, booking date, booking time, It will also contain a button to change booking details and a cancel booking button.
+- Each card will show a booking reference, booking date, and booking time, It will also contain a button to change booking details and a cancel booking button.
 
 ### Edit Booking Page
 - This page will display the current booking details with a form below for the user to update any details.
@@ -312,7 +312,7 @@ The user will then need to select a date and time
 ### Google Developer Tools
 For every element that I added to my HTML, I would add the basic CSS to my stylesheet. I would then use the inspect element to try different styles. Once I've got it to my liking I would try to see if I can implement the styling with bootstrap, if I could not replicate the styling I would copy the CSS from google and paste it into my CSS stylesheet. This allows me to keep track of the code I am using.
 
-I also checked the accessibility of the page using lighthouse.
+I also checked the accessibility of the page using Lighthouse.
 ![google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653683539/lighthouse_mcvgmd.png)
 
 ### Responsive Tools
@@ -350,7 +350,7 @@ Please find below my testing process for all pages via mobile and web:
 All Pages:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Home page | When clicking the "home" button in the navigation bar, the browser redirects me to the home page. The is active styling will appear as the home button has a red background. | PASS
+Home page | When clicking the "home" button in the navigation bar, the browser redirects me to the home page. The active styling will appear as the home button has a red background. | PASS
 Services page | When clicking the "Services" button in the navigation bar, the browser redirects me to the services page. | PASS 
 Contact page | When clicking the "contact" button in the navigation bar, the browser redirects me to the contact page. | PASS
 Book now page | When clicking the "book now" button in the navigation bar, the browser redirects me to the book now page.| PASS
@@ -358,7 +358,7 @@ Manage booking page | When clicking the "manage bookings" button in the navigati
 Edit profile page | Checked foreground information is not distracted by backgrounds| PASS
 Register page | When clicking the "register" button in the navigation bar, the browser redirects me to the register page. The user will know they are on this page by the heading. | PASS
 Login / Logout page | When clicking the "login" or "logout button in the navigation bar, the browser redirects me to the login or logout page. The user will know they are on this page by the heading. | PASS
-Text | Checked that all fonts and colours used are consistent. | PASS
+Text | Checked that all fonts and colors used are consistent. | PASS
 
 ### Footer
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -370,8 +370,8 @@ Instagram | When clicking the Instagram icon, a new tab opens and redirects to t
 ### Home page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 
 ![index_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653684267/accessibility_ojwrh1.png)
@@ -379,8 +379,8 @@ Accessibility | Checked the accessibility of the page using lighthouse| PASS
 ### Servcies page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Book now button | When clicking the book now button on the page, the browser redirects to the booking page. | PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 
@@ -389,8 +389,8 @@ Accessibility | Checked the accessibility of the page using lighthouse| PASS
 ### Contact page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Contact Form | Checked the form submits only when all fields are filled out. | PASS
 
@@ -399,18 +399,18 @@ Contact Form | Checked the form submits only when all fields are filled out. | P
 ### Booking page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Book now button | When clicking the book now button on the page, the browser redirects to the booking page. | PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Booking Form | Checked the form submits only when all required fields are filled out. | PASS
-If not signed in | Checked to see if the user has not signed in the booking form should not show and a message displays prompting the user to signup/sign-in first. | PASS
+If not signed in | Checked to see if the user has not signed in the booking form should not show and a message displays prompting the user to signup/sign in first. | PASS
 
 ### Edit booking page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Edit Booking Form | Checked the form submits only when all required fields are filled out. | PASS
 Form validation | Checked that the telephone number input only allows number input and not any text | PASS
@@ -420,19 +420,19 @@ Form validation | Checked that the telephone number input only allows number inp
 ### Manage booking page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Edit booking button | Checked that the button redirects to the edit booking page with the correct booking instance. | PASS
 Cancel booking button | Checked that the button redirects to the cancel booking page with the correct booking instance. | PASS
 
 ![manage_booking_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685240/managebookinglighthouse_znrhlf.png)
 
-### Create profile page
+### Create a profile page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Create profile form | Checked the form submits only when all required fields are filled out. | PASS
 If the profile has not been created | Checked to see if the user has created a profile, if not it will redirect the user to the create profile page | PASS
@@ -441,8 +441,8 @@ Form validation | Checked that the telephone number input only allows number inp
 ### Edit profile page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Edit profile form | Checked the form submits only when all required fields are filled out. | PASS
 Form validation | Checked that the telephone number input only allows number input and not any text | PASS
@@ -453,19 +453,19 @@ If the profile has not been created | Checked to see if the user has created a p
 ### Register page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Register form | Checked the form submits only when all required fields are filled out. | PASS
-Sign in link | Checked the sign-in link redirects to the sign-in page. | PASS
+Sign-in link | Checked the sign-in link redirects to the sign-in page. | PASS
 
 ![signup_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685241/registerlighthouse_bik8ow.png)
 
 ### Sign in page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
-Responsiveness | Check every element on-page for consistent scalability in mobile, tablet and desktop view.| PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | Check every element on-page for consistent scalability in mobile, tablet, and desktop view.| PASS
 Accessibility | Checked the accessibility of the page using lighthouse| PASS
 Sign in form | Checked the form submits only when all required fields are filled out. | PASS
 Signup link | Checked the signup link redirects to the signup page. | PASS
@@ -473,5 +473,122 @@ Signup link | Checked the signup link redirects to the signup page. | PASS
 ![sign_in_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685240/signinlighthouse_fa4i0k.png)
 
 <a name="development-cycle"></a>
+
+# 5. Development Cycle
+
+[Go to the top](#table-of-contents)
+
+## Project Checklist
+- Install Django and the supporting libraries
+    -  Install Django and Gunicorn. Gunicorn is the server I am using to run Django on Heroku.
+    - Install support libraries including psycopg2, this is used to connect the PostgreSQL database
+    - Install Cloudinary libraries, this is a host provider service that stores images
+    - Create the requirements.txt file. This includes the project's dependencies allowing us to run the project in Heroku.
+
+- Create a new, blank Django Project
+    - Create a new project
+    - Create the app
+    - Add restaurant_booking to the installed apps in settings.py
+    - Migrate all new changes to the database
+    - Run the server to test
+
+- Setup project to use Cloudinary and PostgreSQL
+    - Create new Heroku app
+        - Sign into Heroku
+        - Select New
+        - Select create new app
+        - Enter a relevant app name
+        - Select appropriate region
+        - Select the create app button
+
+    - Attach PostgreSQL database
+        - In Heroku go to resources
+        - Search for Postgres in the add-ons box
+        - Select Heroku Postgres
+        - Submit order form
+
+    - Prepare the environment and settings.py file
+        - Create an env.py file
+        - Add DATABASE_URL with the Postgres URL from Heroku
+        - Add SECRET_KEY with a randomly generated key
+        - Add SECRET_KEY and generated key to the config vars in Heroku
+        - Add the if statement to settings.py to prevent the production server from erroring
+        - Replace the insecure key with the environment variable for the SECRET_KEY
+        - Add the Heroku database as the back end
+        - Migrate changes to the new database
+
+    - Get static media files stored on Cloudinary
+        - Create a Cloudinary account
+        - From the dashboard, copy the API Environment variable
+        - In the settings.py file create a new environment variable for CLOUDINARY_URL
+        - Add the CLOUDINARY_URL variable to Heroku
+        - Add a temporary config var for DISABLE_COLLECTSTATIC
+        - In settings.py add Cloudinary as an installed app
+        - Add static and media file variables
+        - Add templates directory
+        - Change DIR's key to point to TEMPALTES_DIR
+        - Add Heroku hostname to allowed hosts
+        - Create directories for media, static, and templates in the project workspace
+        - Create a Profile
+
+- Deploy new empty project to Heroku
+![initial_heroku_deployment](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653685504/initial_deployment_successful_qa8lfd.png)
+
+<a name="deployment"></a>
+
+# 6. Deployment
+
+[Go to the top](#table-of-contents)
+
+I used the terminal to deploy my project locally. To do this I had to:
+1. Create a repository on GitHub.
+2. Clone the repository on your chosen source code editor (GitPod in my case) using the clone link.
+3. Open the terminal within GitPod
+4. Enter "python3 manage.py runserver into the terminal.
+5. Go to the localhost address on my web browser.
+6. All locally saved changes will show up here.
+
+For the final deployment to Heroku, I had to:
+1. Uncomment the PostgreSQL database from my settings.py file.
+2. Set debug = False in my settings.py file.
+3. Commit and push all files to GitHub
+3. In Heroku, remove the DISABLE_COLLECTSTATIC config var.
+4. In the deploy tab, go to the manual deploy sections and click deploy branch.
+
+I had an issue with the deployed site and the CSS was not showing on my screen.
+This was rectified by restarting all dynos in Heroku.
+
+<a name="end-product"></a>
+
+The end product is available here [here](https://pawfectionparlour.herokuapp.com/).
+
+[Go to the top](#table-of-contents)
+
+- Some forms for this project are built by using the Django-crispy-forms libraries therefore, some of the fields do not contain all the validation rules as I cannot target the individual inputs. For example on the edit profile form, I have added the validation rule so that the user can only enter a number, however, I couldn't figure out a way to add a min and max length value.
+
+<a name="credits"></a>
+
+# 9. Credits
+
+[Go to the top](#table-of-contents)
+
+### Code
+-   The navigation bar came from [Bootstrap](https://getbootstrap.com/docs/5.0/components/navbar).
+
+- The JavaScript code to set the online booking form to default to the current date came from [Stack Overflow](https://stackoverflow.com/questions/6982692/how-to-set-input-type-dates-default-value-to-today).
+
+- The JavaScript code to disable any previous dates on the online booking form came from [Demo2s](https://www.demo2s.com/javascript/javascript-input-date-input-type-date-disable-dates-before-today.html).
+
+### Content
+- All images were provided by the groomer.
+
+### Credits
+- Many Youtube videos were watched to help me along the way.
+
+### Project Acknowledgements
+- Code Institue Tutor Support - For directing me to the correct solutions for any bugs.
+
+- My Mentor - For his constructive criticism and always pushing me to go further to develop my skills.
+
 
 
