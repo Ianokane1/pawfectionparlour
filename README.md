@@ -240,7 +240,6 @@ The link to the font can be found [here](https://fonts.googleapis.com/css2?famil
 ### Landing Page
 - A simple but cute photo of a groomed dog.
 - A book now button that directs the user to create a booking page. If the user has not logged in it will prompt the user to register or log in first.
-- A short introduction to describe the restaurant.
 
 ### Create Profile Page
 - Once the user has registered they will be redirected to the create profile page. The page displays a form for the user to enter their first name, last name, dog name and telephone number.
@@ -254,7 +253,7 @@ The link to the font can be found [here](https://fonts.googleapis.com/css2?famil
 ### Contact Page
 - An information section that displays the groomers telephone number, email address, opening times and address.
 - A contact form that requires the user to enter their full name, email address and a message. The form is already pre-filled with the user's full name (if the user is logged in and has created a profile).
-- A Google maps iframe of the restaurant location.
+- A Google maps iframe of the groomers location.
 
 ### Create Booking Page
 - A form that requires the user to enter/select the booking details.
@@ -280,3 +279,102 @@ The user will then need to select a date and time
 ## 3. Technologies Used
 
 [Go to the top](#table-of-contents)
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML)
+    -   The project uses HyperText Markup Language.
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
+    -   The project uses Cascading Style Sheets.
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    -   The project uses JavaScript.
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+    -   The project uses Python.
+-   [Boostrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    -   The project uses Bootstrap 5.
+-   [PostgreSQL](https://www.postgresql.org/)
+    -   The project uses PostgreSQL as a database.
+-   [Gitpod](https://www.gitpod.io/)
+    -   The project uses Gitpod.
+-   [Chrome](https://www.google.com/intl/en_uk/chrome/)
+    -   The project uses Chrome to debug and test the source code using HTML5.
+-   [Balsamiq](https://balsamiq.com/)
+    -   Balsamiq was used to create the wireframes during the design process.
+-   [Google Fonts](https://fonts.google.com/)
+    -   Google fonts were used to import the "Be Vietnam Pro" font into the style.css file which is used on all pages throughout the project.
+-   [GitHub](https://github.com/)
+    -   GitHub was used to store the project's code after being pushed from Git.
+
+    <a name="testing"></a>
+
+# 4. Testing
+
+[Go to the top](#table-of-contents)
+
+### Google Developer Tools
+For every element that I added to my HTML, I would add the basic CSS to my stylesheet. I would then use the inspect element to try different styles. Once I've got it to my liking I would try to see if I can implement the styling with bootstrap, if I could not replicate the styling I would copy the CSS from google and paste it into my CSS stylesheet. This allows me to keep track of the code I am using.
+
+I also checked the accessibility of the page using lighthouse.
+![google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653683539/lighthouse_mcvgmd.png)
+
+### Responsive Tools
+I used [Am I Responsive](http://ami.responsivedesign.is) to make sure that all my pages are responsive to all devices.
+
+### W3C Validator Tools
+#### HTML and CSS:
+I used [W3C Markup](https://validator.w3.org/#validate_by_input+with_options) to check for any errors within the HTML pages.
+
+- All errors were minimal eg. Whitespace
+
+### JavaScript:
+I used JS Hint to check for any errors within my JavaScript script tags. JS Hint showed warnings on line 1 which was missing a semicolon, however as this was for the script tag I have ignored it. This piece of JavaScript was along copied and pasted from an external source therefore, I have not made any changes to the code.
+
+I had no errors in my JavaScript files.
+
+### Python:
+I used [PEP8 online](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653683876/pep8view_gmj7bb.png) to check for any errors within my Python files. The validator showed multiple "expected 2 blank lines.
+
+There were also "line too long" errors within my settings.py file but I have chosen to ignore these as this is a very important file.
+
+## Manual Testing
+I have tested my site on Safari and google chrome on multiple devices.
+
+These include:
+-   iPhone X
+-   iPhone XS Max
+-   iPad Pro
+-   MacBook Pro
+
+Please find below my testing process for all pages via mobile and web:
+
+### Navigation Bar
+
+All Pages:
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Home page | When clicking the "home" button in the navigation bar, the browser redirects me to the home page. The is active styling will appear as the home button has a red background. | PASS
+Services page | When clicking the "Services" button in the navigation bar, the browser redirects me to the services page. 
+Contact page | When clicking the "contact" button in the navigation bar, the browser redirects me to the contact page. | PASS
+Book now page | When clicking the "book now" button in the navigation bar, the browser redirects me to the book now page.| PASS
+Manage booking page | When clicking the "manage bookings" button in the navigation bar, the browser redirects me to the manage booking page. The user will know they are on this page by the heading. | PASS
+Edit profile page | Checked foreground information is not distracted by backgrounds| PASS
+Register page | When clicking the "register" button in the navigation bar, the browser redirects me to the register page. The user will know they are on this page by the heading. | PASS
+Login / Logout page | When clicking the "login" or "logout button in the navigation bar, the browser redirects me to the login or logout page. The user will know they are on this page by the heading. | PASS
+Foreground & background colour| PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+
+### Footer
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Facebook | When clicking the Facebook icon, a new tab opens and redirects to the Facebook website. | PASS
+Twitter | When clicking the Twitter icon, a new tab opens and redirects to the Twitter website. | PASS
+Instagram | When clicking the Instagram icon, a new tab opens and redirects to the Instagram website. | PASS
+
+### Home page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Accessibility | Checked the accessibility of the page using lighthouse| PASS
+
+![index_google_lighthouse](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653684267/accessibility_ojwrh1.png)
+
+
