@@ -147,3 +147,45 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return str(self.user)
+```
+
+<a name="skeleton"></a>
+
+## 1.3. Skeleton
+
+[Go to the top](#table-of-contents)
+
+Home/Landing Page Desktop:
+![home_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681663/wireframehome_q12gtx.png)
+
+Services Page Desktop:
+![services_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681665/wireframeservices_wf95l7.png)
+
+Register Page Desktop:
+![register_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681661/wireframesignup_j11mzc.png)
+
+Login Page Desktop:
+![login_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681661/wireframelogin_bdccry.png)
+
+Online Booking Page Desktop:
+![online_booking_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681662/wireframemakebooking_qroecc.png)
+
+Contact Page Desktop:
+![contact_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681661/wireframecontact_xsa6u3.png)
+
+Edit Profile Page Desktop:
+![edit_profile_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681661/wireframeeditprofile_icfqhw.png)
+
+Manage Booking Page Desktop:
+![manage_booking_page_desktop](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681662/wireframemanagebookings_f4l7dz.png)
+
+Mobile Views
+![mobile_views](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681799/mobileviewone_tvmgoz.png)
+
+Mobile Views
+![mobile_views](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653681799/mobileview2_paojxs.png)
+
+
+<a name="surface"></a>
+
+## 1.4. Surface
