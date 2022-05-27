@@ -1,13 +1,16 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+
 # Import Django generic libary
 from django.views import generic, View
 from django.views.generic import TemplateView, DeleteView
 from django.urls import reverse_lazy
+
 # Import Booking model from models
 from .models import Booking, UserProfile
 from .forms import UpdateBookingDetails, EditProfileForm
 
 # Create your views here.
+
 
 class HomeView(TemplateView):
     template_name = "index.html"
@@ -16,7 +19,8 @@ class HomeView(TemplateView):
         return render(
             request,
             "index.html",
-            )
+        )
+
 
 class ServicesView(TemplateView):
     template_name = "services.html"
@@ -27,6 +31,7 @@ class ServicesView(TemplateView):
             "services.html",
         )
 
+
 class ContactView(TemplateView):
     template_name = "contact.html"
 
@@ -34,19 +39,20 @@ class ContactView(TemplateView):
         return render(
             request,
             "contact.html",
-            )
+        )
+
 
 class ManageBooking(generic.ListView):
     model = Booking
     queryset = Booking.objects.all()
     template_name = "manage_booking.html"
     paginate_by = 6
-    extra_context = {
-        "manage_booking_active": "custom-red"
-    }
+    extra_context = {"manage_booking_active": "custom-red"}
 
-    def get_queryset(self):
-        return Booking.objects.filter(user_id=self.request.user)            
+
+def get_queryset(self):
+    return Booking.objects.filter(user_id=self.request.user)
+
 
 class OnlineBookingView(View):
     template_name = "online_booking.html"
@@ -57,7 +63,7 @@ class OnlineBookingView(View):
             "online_booking.html",
             {
                 "online_booking_active": "custom-red",
-            }
+            },
         )
 
     def post(self, request):
@@ -72,12 +78,13 @@ class OnlineBookingView(View):
 
         online_booking.save()
 
-        return redirect(reverse('manage_booking'))
+        return redirect(reverse("manage_booking"))
+
 
 class EditBooking(View):
     model = Booking
     template_name = "edit_booking.html"
-    context_object_name = 'edit_booking'
+    context_object_name = "edit_booking"
 
     def get(self, request, booking_id, *args, **kwargs):
         booking = get_object_or_404(Booking, pk=booking_id)
@@ -88,15 +95,14 @@ class EditBooking(View):
             {
                 "booking": booking,
                 "updated": False,
-                "Update_BookingDetails": UpdateBookingDetails(instance=booking)
+                "Update_BookingDetails": UpdateBookingDetails(instance=booking),
             },
         )
 
     def post(self, request, booking_id, *args, **kwargs):
         booking = get_object_or_404(Booking, pk=booking_id)
 
-        booking_details_form = UpdateBookingDetails(
-            request.POST, instance=booking)
+        booking_details_form = UpdateBookingDetails(request.POST, instance=booking)
 
         if booking_details_form.is_valid():
             booking.status = 0
@@ -109,7 +115,7 @@ class EditBooking(View):
             "edit_booking.html",
             {
                 "booking": booking,
-                'updated': True,
+                "updated": True,
                 "Update_BookingDetails": booking_details_form,
             },
         )
@@ -119,7 +125,8 @@ class DeleteBooking(DeleteView):
     model = Booking
     pk_url_kwarg = "booking_id"
     success_url = reverse_lazy("manage_booking")
-    template_name = "delete_booking.html"        
+    template_name = "delete_booking.html"
+
 
 class CreateProfile(View):
     template_name = "create_profile.html"
@@ -145,17 +152,18 @@ class CreateProfile(View):
 
         CreateUserProfile.save()
 
-        return redirect(reverse('home'))
+        return redirect(reverse("home"))
+
 
 class EditProfile(View):
     model = UserProfile
     template_name = "edit_profile.html"
-    context_object_name = 'edit_profile'
+    context_object_name = "edit_profile"
 
     def get(self, request, user, *args, **kwargs):
         profile = UserProfile.objects.filter(user=user).first()
         if profile is None:
-            return redirect(reverse('create_profile'))
+            return redirect(reverse("create_profile"))
 
         return render(
             request,
@@ -183,7 +191,7 @@ class EditProfile(View):
             "edit_profile.html",
             {
                 "profile": profile,
-                'updated': True,
+                "updated": True,
                 "Edit_ProfileForm": edit_profile_form,
             },
         )

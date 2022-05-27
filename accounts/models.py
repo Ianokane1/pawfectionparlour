@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+
 # Import Django authentication user system
 from django.contrib.auth.models import User
 
@@ -8,25 +9,24 @@ STATUS = ((0, "Booking Requested"), (1, "Booking Accepted"))
 
 
 class Booking(models.Model):
-    booking_id = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, editable=False)
+    booking_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="user_bookings")
+        User, on_delete=models.CASCADE, related_name="user_bookings"
+    )
     booking_date = models.DateField(auto_now=False)
     booking_time = models.TimeField(auto_now=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-booking_date']
+        ordering = ["-booking_date"]
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(
-        User, on_delete=models.CASCADE, primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
     dog_name = models.CharField(max_length=150)
     phone_number = models.CharField(max_length=11)
 
     def __str__(self):
-        return str(self.user)        
+        return str(self.user)
