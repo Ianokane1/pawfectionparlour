@@ -5,9 +5,9 @@ Welcome to Pawfection Parlour. This project is a simplebooking system, allow use
 
 This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile and bookings.
 
-A live website can be found [here](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653677762/amiresponsive_czuaj5.png).
+A live website can be found [here](https://pawfectionparlour.herokuapp.com/).
 
-![website preview]()
+![website preview](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653677762/amiresponsive_czuaj5.png)
 
 # Table of Contents
 
