@@ -1,108 +1,72 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Dog Grooming Website
 
-Welcome Ian Kane,
+## Introduction
+Welcome to Pawfection Parlour. This project is a simplebooking system, allow users to book a slot for this dog groomer. This will use languages such as Django, Python, HTML, CSS and JavaScript.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile and bookings.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+A live website can be found [here](https://pawfectionparlour.herokuapp.com/).
 
-## Gitpod Reminders
+![website preview]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Table of Contents
 
-`python3 -m http.server`
+-   [1. UX](#ux)
+    -   [1.1. Strategy](#strategy)
+        -   [Project Goals](#project-goals)
+            -   [User Goals:](#user-goals)
+            -   [User Expectations:](#user-expectations)
+            -   [Trends of Modern Websites](#trends-of-modern-websites)
+            -   [Strategy Table](#strategy-table)
+    -   [1.2. Structure](#structure)
+    -   [1.3. Skeleton](#skeleton)
+    -   [1.4. Surface](#surface)
+-   [2. Features](#features)
+-   [3. Technologies Used](#technologies-used)
+-   [4. Testing](#testing)
+-   [5. Development Cycle](#development-cycle)
+-   [6. Deployment](#deployment)
+-   [7. End Product](#end-product)
+-   [8. Known Bugs](#known-bugs)
+-   [9. Credits](#credits)
 
-A blue button should appear to click: _Make Public_,
+<a name="ux"></a>
 
-Another blue button should appear to click: _Open Browser_.
+# 1. UX
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Go to the top](#table-of-contents)
 
-A blue button should appear to click: _Make Public_,
+For this project I wanted to build something close to home. My girlfriend owns a dog grooming business yet doesn't own a website. All of her bookings are made via social media and she adds all her bookings in manually. I wamted to create a system where that can be done via a website. 
 
-Another blue button should appear to click: _Open Browser_.
+his project will showcase simplicity and ease to making a booking, updating a booking, cancelling a booking, creating a personal profile and updating the same profile.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<a name="strategy"></a>
 
-To log into the Heroku toolbelt CLI:
+[Go to the top](#table-of-contents)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Project Goals
+The main goal of this project is to allow the user to sign up, sign in/out, create/update a user profile and create/update/delete a booking in a simple and effective process.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User Goals:
+First Time Visitor Goals
+-   As a first-time visitor, I want to make a bokking at my chosen date and time.
+-   As a first-time visitor, I want to view the servcies available, so that I can decide if this groomer is for me.
+-   As a first-time visitor, I want to be able to get the contact details of the groomer with ease.
 
-------
+Returning Visitor Goals
+-   As a Returning Visitor, I want to update my booking details.
+-   As a Returning Visitor, I want to cancel a booking I have already made.
+-   As a Returning Visitor, I want to edit my profile for any future bookings.
 
-## Release History
+### User Expectations:
+The system should have a simple user interface, with the navigation to each section clear and concise.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+-   The servcies page is clear to read.
+-   The user interface is easy to navigate.
+-   The website is responsive on all devices.
+-   To have the ability to contact the groomer for any enquiries.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### User Stories
+Throughout the project I used the GitHub projects board to log all user stories as my project management tool. This helped me keep focus on the necesarry tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+![user_story_board](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653677510/User_Stories_To_Do_hmsye6.png)
