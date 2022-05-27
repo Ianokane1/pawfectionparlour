@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Italianno&display=swap');
 
+html, body {
+    height: 100%;
+  }
+
 
 body{
     background-color: antiquewhite;
@@ -7,9 +11,6 @@ body{
     padding-bottom: 70px;
 }
 
-.transparent-background {
-    background-color: rgba(51, 170, 51, .1);
-}
 /* Navigation bar */
 
 .active_page {
@@ -27,15 +28,19 @@ body{
 
 /* Footer */
 
+
+
 footer i {
     font-size: 200%;
     padding: 3%;
     color: antiquewhite
 }
 
-.fa-facebook:hover,
+.fa-facebook-f:hover,
 .fa-twitter:hover,
-.fa-instagram:hover {
+.fa-instagram:hover,
+.fa-linkedin-in:hover,
+.fa-google:hover {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5);
