@@ -189,3 +189,94 @@ Mobile Views
 <a name="surface"></a>
 
 ## 1.4. Surface
+
+### Colours
+
+After discussing with the groomer, she opted for bg-success with background color of antiquewhite.
+
+### Typography
+
+Groomer decided to use Cinzel + Decorative as my font of choice with Italianno as the backup font for browsers that might not support
+
+The link to the font can be found [here](https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Italianno&display=swap').
+
+<a name="features"></a>
+
+# 2. Features
+
+[Go to the top](#table-of-contents)
+
+### All Pages
+- The navigation bar is placed at the top of all pages. The navigation bar is dynamic in that meaning depending on if the user is logged in or not the options will change.
+- If the user is not logged in the navigation bar will look like this:
+![user_not_logged_in](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682588/navbarprelogin_cc96ah.png)
+- If the user is logged in the navigation bar will look like this:
+![user_logged_in](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682588/navbar_r9bwoi.png)
+- The footer is placed at the bottom of each page with social media icons. When hovering over them it creates a zoom effect giving the user more of an experience. These icons will open the links in a new tab.
+
+- The website title is also placed at the top of all pages. Clicking on it will also direct the user to the home page.
+
+### Register Page
+- A simple signup form that requires the user to enter a unique email address and a password. The password must be entered again for confirmation, this must match the already entered password above.
+- A message to prompt the user that if an account is already been created they can click the sign-in hyperlink to be redirected to the sign-in page.
+- If the user enters an email address that has already been registered, the user is prompted by an error message.
+![email_validation_error](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682592/signupemail_iwjh8c.png)
+- If the user enters a password that is not secure, the user will be prompted by a message.
+![password_too_common](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682588/passwordcommon_pyvrj3.png)
+- If the user enters both passwords that do not match, the user is prompted by a message.
+![signup_email_validation](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682590/samepassword_n5ctzz.png)
+- Once the user has successfully signed up, this will automatically log in and direct the user to the create profile page.
+
+### Login Page
+- A login form that requires the user to enter their email address and password that they used when signing up to the site.
+- A message to prompt the user that if an account has not been created they can click the signup hyperlink to be redirected to the signup page.
+- If the user enters in the wrong credentials, a message is displayed to the user.
+![signup_email_validation](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682792/loginzoom_ro6rpu.png)
+
+### Logout Page
+- When clicking logout from the navigation bar, the user is redirected to a sign-out page to confirm their action.
+![logout_page](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653682877/signoutzoom_o6oi64.png)
+
+### Landing Page
+- A simple but cute photo of a groomed dog.
+- A book now button that directs the user to create a booking page. If the user has not logged in it will prompt the user to register or log in first.
+- A short introduction to describe the restaurant.
+
+### Create Profile Page
+- Once the user has registered they will be redirected to the create profile page. The page displays a form for the user to enter their first name, last name, dog name and telephone number.
+
+### Edit Profile Page
+- The user can navigate to this page by clicking on the edit profile link in the navigation bar. This page will display the current profile details with a form below for the user to update any details.
+
+### Services Page
+- All three service options are displayed.
+
+### Contact Page
+- An information section that displays the groomers telephone number, email address, opening times and address.
+- A contact form that requires the user to enter their full name, email address and a message. The form is already pre-filled with the user's full name (if the user is logged in and has created a profile).
+- A Google maps iframe of the restaurant location.
+
+### Create Booking Page
+- A form that requires the user to enter/select the booking details.
+Full name and contact telephone number are prefilled if the user has created a profile.
+The user will then need to select a date and time
+- The date input field has JavaScript code so the default value is today's date and the user cannot select a date that is previous to today.
+- When clicking the make book now button the booking will then be requested to the groomer for approval.
+![Make a booking](https://res.cloudinary.com/dkxv7amyg/image/upload/v1653683132/makeabookingzoomed_lphsgy.png)
+
+### Manage Booking Page
+- Displays all user-related bookings in a list view within a card.
+- Each card will show a booking reference, booking date, booking time, It will also contain a button to change booking details and a cancel booking button.
+
+### Edit Booking Page
+- This page will display the current booking details with a form below for the user to update any details.
+- When the changes are submitted, the booking will be processed as the booking requested status.
+
+### Cancel Booking
+- When the user clicks the cancel booking button they will be redirected to a confirmation page.
+
+<a name="technologies-used"></a>
+
+## 3. Technologies Used
+
+[Go to the top](#table-of-contents)
